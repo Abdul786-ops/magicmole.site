@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Mole - Fun Gaming Experiences</title>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6a35ee;
+            --secondary: #ff5e94;
+            --accent: #39d4ca;
+            --dark: #1a0933;
+            --light: #f8f9fa;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f051e;
+            color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .disclaimer {
+            background-color: var(--dark);
+            color: #ff5e5e;
+            padding: 8px 0;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 1px solid var(--primary);
+        }
+        
+        .navbar {
+            background-color: rgba(26, 9, 51, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 28px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .nav-link {
+            color: var(--light) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+        
+        .hero-section {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600"><defs><radialGradient id="grad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="30%" stop-color="%231a0933" stop-opacity="1"/><stop offset="70%" stop-color="%236a35ee" stop-opacity="0.5"/><stop offset="100%" stop-color="%23ff5e94" stop-opacity="0.3"/></radialGradient></defs><rect width="1200" height="600" fill="url(%23grad)"/><circle cx="800" cy="150" r="80" fill="%2339d4ca" opacity="0.6"/><circle cx="300" cy="350" r="100" fill="%236a35ee" opacity="0.4"/><circle cx="1000" cy="450" r="120" fill="%23ff5e94" opacity="0.3"/></svg>') no-repeat center center;
+            background-size: cover;
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #6a35ee, #ff5e94, #39d4ca);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #d8d8d8;
+        }
+        
+        .btn-primary {
+            background: var(--gradient);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(106, 53, 238, 0.3);
+        }
+        
+        .game-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .game-icon i {
+            font-size: 36px;
+            color: white;
+        }
+        
+        .game-card:hover .game-icon {
+            transform: translateY(-10px) rotate(5deg);
+            box-shadow: 0 15px 30px rgba(106, 53, 238, 0.4);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        .about-section, .features-section, .faq-section {
+            padding: 100px 0;
+        }
+        
+        .about-section {
+            background-color: rgba(26, 9, 51, 0.7);
+        }
+        
+        .features-section {
+            background: linear-gradient(to bottom, #0f051e, #1a0933);
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(106, 53, 238, 0.2);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(106, 53, 238, 0.2);
+            border-color: rgba(106, 53, 238, 0.5);
+        }
+        
+        .faq-section {
+            background-color: rgba(26, 9, 51, 0.8);
+        }
+        
+        .accordion-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(106, 53, 238, 0.2);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .accordion-button {
+            background: transparent;
+            color: white;
+            font-weight: 600;
+            padding: 20px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background: rgba(106, 53, 238, 0.2);
+            color: var(--accent);
+        }
+        
+        .accordion-body {
+            background: rgba(26, 9, 51, 0.5);
+            color: #d8d8d8;
+        }
+        
+        .responsible-entertainment {
+            background: rgba(26, 9, 51, 0.9);
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .responsible-entertainment h5 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--accent);
+        }
+        
+        .responsible-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .responsible-logos img {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .responsible-logos img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(57, 212, 202, 0.3);
+        }
+        
+        footer {
+            background: var(--dark);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-links h6 {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #d8d8d8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #8b8b8b;
+            font-size: 14px;
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .responsible-logos {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Age Disclaimer -->
+    <div class="disclaimer">
+        <div class="container">
+            <p>18+ ONLY. This website offers entertainment experiences only. No real-money gambling or prizes are offered.</p>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%236a35ee'/><circle cx='35' cy='40' r='5' fill='white'/><circle cx='65' cy='40' r='5' fill='white'/><path d='M30 65 Q50 75 70 65' stroke='white' stroke-width='3' fill='none'/><path d='M20 30 Q50 0 80 30' stroke='%23ff5e94' stroke-width='8' fill='none'/></svg>" alt="Magic Mole Logo">
+                magicmole.site
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="play.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="disclaimer.html">Disclaimer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="terms.html">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="privacy.html">Privacy</a>
+                    </li>
+                </ul>
+                <a href="play.html" class="btn btn-primary ms-lg-3">Play Now</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Unleash the Magic of Adventure</h1>
+                    <p class="hero-subtitle">Join Magic Mole on an extraordinary journey through enchanted worlds. Experience unique entertainment with stunning visuals and captivating gameplay.</p>
+                    <a href="play.html" class="btn btn-primary">Explore Games</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><circle cx='200' cy='200' r='180' fill='%231a0933'/><circle cx='200' cy='200' r='160' fill='%236a35ee' opacity='0.7'/><circle cx='150' cy='170' r='20' fill='white'/><circle cx='250' cy='170' r='20' fill='white'/><circle cx='150' cy='170' r='8' fill='%231a0933'/><circle cx='250' cy='170' r='8' fill='%231a0933'/><path d='M150 230 Q200 260 250 230' stroke='white' stroke-width='8' fill='none'/><path d='M120 120 Q200 80 280 120' stroke='%23ff5e94' stroke-width='12' fill='none'/><path d='M130 300 Q200 340 270 300' stroke='%2339d4ca' stroke-width='10' fill='none'/></svg>" alt="Magic Mole Character" class="img-fluid floating" style="max-width: 80%;">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Games Section -->
+    <section id="games" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Our Magical Games</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="game-card text-center">
+                        <div class="game-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4>Mole's Treasure Hunt</h4>
+                        <p>Dig through magical landscapes to uncover hidden gems and rare artifacts in this exciting adventure.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="game-card text-center">
+                        <div class="game-icon">
+                            <i class="fas fa-hat-wizard"></i>
+                        </div>
+                        <h4>Wizard's Challenge</h4>
+                        <p>Test your skills in this puzzle adventure filled with magical obstacles and brain-teasing challenges.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="game-card text-center">
+                        <div class="game-icon">
+                            <i class="fas fa-dragon"></i>
+                        </div>
+                        <h4>Dragon's Lair</h4>
+                        <p>Navigate through fiery caves and collect dragon eggs in this thrilling arcade-style experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Magic Mole</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'><rect width='500' height='400' rx='20' fill='%231a0933'/><circle cx='250' cy='120' r='80' fill='%236a35ee'/><circle cx='220' cy='100' r='15' fill='white'/><circle cx='280' cy='100' r='15' fill='white'/><circle cx='220' cy='100' r='5' fill='%231a0933'/><circle cx='280' cy='100' r='5' fill='%231a0933'/><path d='M220 150 Q250 170 280 150' stroke='white' stroke-width='5' fill='none'/><path d='M150 200 Q250 250 350 200' stroke='%23ff5e94' stroke-width='10' fill='none'/><rect x='100' y='250' width='300' height='100' rx='15' fill='%2339d4ca' opacity='0.7'/><text x='250' y='310' font-family='Arial' font-size='24' fill='white' text-anchor='middle'>magicmole.site</text></svg>" alt="About Magic Mole" class="img-fluid rounded-3">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">A New World of Entertainment</h3>
+                    <p>Magic Mole brings you a unique gaming experience that combines adventure, strategy, and fun. Our games are designed to provide hours of entertainment with captivating storylines and stunning visuals.</p>
+                    <p>We create immersive worlds where players can explore, solve puzzles, and embark on exciting quests. Each game is carefully crafted to deliver a memorable experience that keeps you coming back for more.</p>
+                    <p>Our team of developers and designers work tirelessly to ensure that every aspect of our games meets the highest standards of quality and entertainment value.</p>
+                    <a href="#features" class="btn btn-primary mt-3">Discover Features</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Magical Features</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="game-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Stunning Visuals</h4>
+                        <p>Immerse yourself in beautifully crafted worlds with vibrant colors and detailed environments.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="game-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h4>Engaging Gameplay</h4>
+                        <p>Enjoy smooth controls and intuitive mechanics that make every moment enjoyable.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="game-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>Rewarding Progress</h4>
+                        <p>Unlock achievements, collect rewards, and track your progress as you advance.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="game-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Social Features</h4>
+                        <p>Connect with friends, share achievements, and compete on leaderboards.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="game-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h4>Regular Updates</h4>
+                        <p>Experience new content regularly with updates that add features and expand worlds.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="game-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Safe Environment</h4>
+                        <p>Play in a secure, responsibly designed environment focused on entertainment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            What is Magic Mole?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Magic Mole is an entertainment platform offering unique gaming experiences. Our games focus on adventure, strategy, and fun without any real-money gambling elements.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Is Magic Mole free to play?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, all our games are free to play. We focus on providing entertainment value without any cost to our users.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Are there any real-money prizes?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No, Magic Mole does not offer any real-money gambling or real-world prizes. We provide entertainment experiences only.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            How do I create an account?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can play our games without creating an account. However, creating an account allows you to save your progress and access additional features.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            Is my personal information safe?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we take privacy seriously. We only collect necessary information and never share it with third parties without your consent.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section id="play" class="responsible-entertainment">
+        <div class="container text-center">
+            <h2 class="section-title">Ready to Play?</h2>
+            <p class="lead mb-4">Join the adventure and experience the magic today!</p>
+            <a href="play.html" class="btn btn-primary btn-lg">Start Playing Now</a>
+        </div>
+    </section>
+    
+    <!-- Responsible Entertainment -->
+    <section class="responsible-entertainment">
+        <div class="container">
+            <h5>The Right Way to Enjoy</h5>
+            <div class="responsible-logos">
+                <a href="#" aria-label="Support for responsible entertainment">
+                    <img src="data:image/svg+xml;utf8,
+                    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'>
+                        <rect width='100' height='40' fill='%23f8f9fa' rx='5'/>
+                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>Entertainment Guard</text>
+                    </svg>" alt="Support for responsible entertainment">
+                </a>
+                <a href="#" aria-label="Entertainment awareness">
+                    <img src="data:image/svg+xml;utf8,
+                    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'>
+                        <rect width='100' height='40' fill='%23f8f9fa' rx='5'/>
+                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>PlayMindful</text>
+                    </svg>" alt="Entertainment awareness">
+                </a>
+                <a href="#" aria-label="Entertainment control">
+                    <img src="data:image/svg+xml;utf8,
+                    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'>
+                        <rect width='100' height='40' fill='%23f8f9fa' rx='5'/>
+                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>PlayControl</text>
+                    </svg>" alt="Entertainment control">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="navbar-brand">magicmole.site</h4>
+                    <p class="mt-3">A magical gaming experience designed for entertainment and fun.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="footer-links">
+                        <h6>Navigation</h6>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#games">Games</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="footer-links">
+                        <h6>Legal</h6>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Responsible Play</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="footer-links">
+                        <h6>Contact & Support</h6>
+                        <p>Email: <a href="mailto:support@magicmole.site">support@magicmole.site</a></p>
+                        <div class="social-icons mt-3">
+                            <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <p>For adults 18+ only. magicmole.site provides entertainment experiences only — no real-money gambling or real-world prizes are offered.</p>
+                <p>© 2025 magicmole.site. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(26, 9, 51, 0.98)';
+                navbar.style.padding = '10px 0';
+            } else {
+                navbar.style.backgroundColor = 'rgba(26, 9, 51, 0.95)';
+                navbar.style.padding = '15px 0';
+            }
+        });
+        
+        // Add animation to elements when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__fadeInUp');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.game-card, .feature-card').forEach(card => {
+                card.classList.add('animate__animated');
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

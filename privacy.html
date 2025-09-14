@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Policy | Magic Mole Adventures</title>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <meta name="description" content="Magic Mole Adventures privacy policy - learn how we protect your data and respect your privacy.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6a35ee;
+            --secondary: #ff5e94;
+            --accent: #39d4ca;
+            --dark: #1a0933;
+            --light: #f8f9fa;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f051e;
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+        
+        .disclaimer {
+            background-color: var(--dark);
+            color: #ff5e5e;
+            padding: 8px 0;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 1px solid var(--primary);
+        }
+        
+        .navbar {
+            background-color: rgba(26, 9, 51, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 28px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .nav-link {
+            color: var(--light) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+
+         .btn-primary {
+            background: var(--gradient);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(106, 53, 238, 0.3);
+        }
+        
+        
+        .page-content {
+            padding: 100px 0 80px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(106, 53, 238, 0.3);
+        }
+        
+        .content-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
+        .privacy-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .privacy-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .privacy-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .data-table th {
+            background: rgba(106, 53, 238, 0.3);
+            padding: 15px;
+            text-align: left;
+            color: var(--accent);
+        }
+        
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .responsible-entertainment {
+            background: rgba(26, 9, 51, 0.9);
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .responsible-entertainment h5 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--accent);
+        }
+        
+        .responsible-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .responsible-logos img {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .responsible-logos img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(57, 212, 202, 0.3);
+        }
+        
+        footer {
+            background: var(--dark);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-links h6 {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #d8d8d8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #8b8b8b;
+            font-size: 14px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .responsible-logos {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .data-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body ondragstart="return false;" ondrop="return false;">
+    <!-- Age Disclaimer -->
+    <div class="disclaimer">
+        <div class="container">
+            <p>18+ ONLY. Magic Mole provides entertainment experiences only. No real-money gambling or prizes are offered.</p>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%236a35ee'/><circle cx='35' cy='40' r='5' fill='white'/><circle cx='65' cy='40' r='5' fill='white'/><path d='M30 65 Q50 75 70 65' stroke='white' stroke-width='3' fill='none'/><path d='M20 30 Q50 0 80 30' stroke='%23ff5e94' stroke-width='8' fill='none'/></svg>" alt="Magic Mole Logo">
+                magicmole.site
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="play.html">Experiences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="disclaimer.html">Disclaimer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="privacy.html">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="terms.html">Terms</a>
+                    </li>
+                </ul>
+                 <a href="play.html" class="btn btn-primary ms-lg-3">Play Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="page-content">
+        <div class="container">
+            <h2 class="section-title">Privacy Policy</h2>
+
+            <div class="content-card">
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Our Commitment to Your Privacy</h3>
+                    <p>At Magic Mole Adventures, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our entertainment services. Please read this privacy policy carefully.</p>
+                    <p>By using our website and services, you consent to the data practices described in this policy. If you do not agree with the data practices described, you should not use our website.</p>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Information We Collect</h3>
+                    <p>We may collect information about you in a variety of ways. The information we may collect includes:</p>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Examples</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Personal Data</td>
+                                <td>Email address, username (if provided)</td>
+                                <td>Account management, communication</td>
+                            </tr>
+                            <tr>
+                                <td>Usage Data</td>
+                                <td>Game progress, preferences, settings</td>
+                                <td>Improving user experience</td>
+                            </tr>
+                            <tr>
+                                <td>Technical Data</td>
+                                <td>IP address, browser type, device information</td>
+                                <td>Security, analytics, compatibility</td>
+                            </tr>
+                            <tr>
+                                <td>Cookies</td>
+                                <td>Session data, preferences</td>
+                                <td>Website functionality, analytics</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <h3>Use of Cookies and Tracking Technologies</h3>
+                    <p>We may use cookies, web beacons, tracking pixels, and other tracking technologies to help customize the Site and improve your experience.</p>
+                    <p>We use cookies for:</p>
+                    <ul>
+                        <li>Remembering your preferences and settings</li>
+                        <li>Understanding how you use our services</li>
+                        <li>Measuring the effectiveness of our content</li>
+                        <li>Providing general analytics</li>
+                    </ul>
+                    <p>You can control the use of cookies at the individual browser level. If you reject cookies, you may still use our website, but your ability to use some features or areas may be limited.</p>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>How We Use Your Information</h3>
+                    <p>We may use the information we collect for various purposes, including to:</p>
+                    <ul>
+                        <li>Provide, operate, and maintain our website and services</li>
+                        <li>Improve, personalize, and expand our website and services</li>
+                        <li>Understand and analyze how you use our website and services</li>
+                        <li>Develop new products, services, features, and functionality</li>
+                        <li>Communicate with you for customer service, updates, and promotional purposes</li>
+                        <li>Prevent fraudulent transactions and monitor against theft</li>
+                        <li>Find and prevent security issues</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Data Security</h3>
+                    <p>We implement appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please also remember that we cannot guarantee that the internet itself is 100% secure.</p>
+                    <p>We will do our best to protect your personal information, but transmission of personal information to and from our Services is at your own risk. You should only access the services within a secure environment.</p>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                    <h3>Third-Party Services</h3>
+                    <p>We may employ third-party companies and individuals to facilitate our Service, provide the Service on our behalf, perform Service-related services, or assist us in analyzing how our Service is used.</p>
+                    <p>These third parties have access to your Personal Information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Your Data Protection Rights</h3>
+                    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+                    <ul>
+                        <li>The right to access – You have the right to request copies of your personal data.</li>
+                        <li>The right to rectification – You have the right to request correction of any information you believe is inaccurate.</li>
+                        <li>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</li>
+                        <li>The right to restrict processing – You have the right to request that we restrict the processing of your personal data.</li>
+                        <li>The right to data portability – You have the right to request that we transfer the data that we have collected to another organization.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Children's Privacy</h3>
+                    <p>Our Services are not intended for use by children under the age of 18. We do not knowingly collect personally identifiable information from children under 18.</p>
+                    <p>If you become aware that a child has provided us with personal information without parental consent, please contact us. If we become aware that we have collected personal information from children without verification of parental consent, we take steps to remove that information from our servers.</p>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Contact Us</h3>
+                    <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                    <p>Email: <a href="mailto:privacy@magicmole.site" style="color: var(--accent);">privacy@magicmole.site</a></p>
+                    <p>We will respond to your inquiry within 30 days.</p>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Changes to This Privacy Policy</h3>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                    <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                    <p><strong>Last Updated:</strong> January 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Responsible Entertainment Section -->
+    <section class="responsible-entertainment">
+        <div class="container">
+             <h5>The Right Way to Enjoy</h5>
+            <div class="responsible-logos">
+                <a href="#" aria-label="Support for responsible entertainment">
+                    <img src="data:image/svg+xml;utf8,
+                    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'>
+                        <rect width='100' height='40' fill='%23f8f9fa' rx='5'/>
+                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>Entertainment Guard</text>
+                    </svg>" alt="Support for responsible entertainment">
+                </a>
+                <a href="#" aria-label="Entertainment awareness">
+                    <img src="data:image/svg+xml;utf8,
+                    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'>
+                        <rect width='100' height='40' fill='%23f8f9fa' rx='5'/>
+                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>PlayMindful</text>
+                    </svg>" alt="Entertainment awareness">
+                </a>
+                <a href="#" aria-label="Entertainment control">
+                    <img src="data:image/svg+xml;utf8,
+                    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'>
+                        <rect width='100' height='40' fill='%23f8f9fa' rx='5'/>
+                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>PlayControl</text>
+                    </svg>" alt="Entertainment control">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="navbar-brand">magicmole.site</h4>
+                    <p class="mt-3">A magical gaming experience designed for entertainment and fun.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="footer-links">
+                        <h6>Navigation</h6>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="play.html">Experiences</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#about">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="footer-links">
+                        <h6>Legal</h6>
+                        <ul>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="disclaimer.html">Responsible Play</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="footer-links">
+                        <h6>Support</h6>
+                        <p>Email: <a href="mailto:support@magicmole.site">support@magicmole.site</a></p>
+                        <p>We're here to help you with any questions about our magical adventures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <p>For adults 18+ only. magicmole.site provides entertainment experiences only — no real-money gambling or real-world prizes are offered.</p>
+                <p>© 2025 magicmole.site. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

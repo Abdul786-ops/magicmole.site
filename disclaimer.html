@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disclaimer | Magic Mole Adventures</title>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <meta name="description" content="Important legal disclaimer and terms of use for Magic Mole Adventures interactive entertainment experiences.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6a35ee;
+            --secondary: #ff5e94;
+            --accent: #39d4ca;
+            --dark: #1a0933;
+            --light: #f8f9fa;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f051e;
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+        
+        .disclaimer {
+            background-color: var(--dark);
+            color: #ff5e5e;
+            padding: 8px 0;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 1px solid var(--primary);
+        }
+        
+        .navbar {
+            background-color: rgba(26, 9, 51, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 28px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .nav-link {
+            color: var(--light) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+
+         .btn-primary {
+            background: var(--gradient);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(106, 53, 238, 0.3);
+        }
+        
+        
+        .page-content {
+            padding: 100px 0 80px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(106, 53, 238, 0.3);
+        }
+        
+        .content-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
+        .disclaimer-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .disclaimer-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .disclaimer-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .responsible-entertainment {
+            background: rgba(26, 9, 51, 0.9);
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .responsible-entertainment h5 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--accent);
+        }
+        
+        .responsible-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .responsible-logos img {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .responsible-logos img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(57, 212, 202, 0.3);
+        }
+        
+        footer {
+            background: var(--dark);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-links h6 {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #d8d8d8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #8b8b8b;
+            font-size: 14px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .responsible-logos {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body ondragstart="return false;" ondrop="return false;">
+    <!-- Age Disclaimer -->
+    <div class="disclaimer">
+        <div class="container">
+            <p>18+ ONLY. Magic Mole provides entertainment experiences only. No real-money gambling or prizes are offered.</p>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%236a35ee'/><circle cx='35' cy='40' r='5' fill='white'/><circle cx='65' cy='40' r='5' fill='white'/><path d='M30 65 Q50 75 70 65' stroke='white' stroke-width='3' fill='none'/><path d='M20 30 Q50 0 80 30' stroke='%23ff5e94' stroke-width='8' fill='none'/></svg>" alt="Magic Mole Logo">
+                magicmole.site
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="play.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="disclaimer.html">Disclaimer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="privacy.html">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="terms.html">Terms</a>
+                    </li>
+                </ul>
+                 <a href="play.html" class="btn btn-primary ms-lg-3">Play Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="page-content">
+        <div class="container">
+            <h2 class="section-title">Important Legal Disclaimer</h2>
+
+            <div class="content-card">
+                <div class="disclaimer-item">
+                    <div class="disclaimer-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Age Restriction</h3>
+                    <p>Magic Mole Adventures is strictly intended for adults aged 18 years and older. By accessing our website and using our services, you confirm that you are at least 18 years of age. We reserve the right to request proof of age at any stage to verify that minors are not using our service.</p>
+                </div>
+
+                <div class="disclaimer-item">
+                    <div class="disclaimer-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Entertainment Only</h3>
+                    <p>All games and experiences provided by Magic Mole Adventures are for entertainment purposes only. No real-money gambling takes place on this platform, and no real currency or monetary prizes can be won. Our experiences simulate gaming mechanics for entertainment value without any financial risk or reward.</p>
+                </div>
+
+                <div class="disclaimer-item">
+                    <div class="disclaimer-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3>No Financial Risk</h3>
+                    <p>Magic Mole Adventures does not require any financial investment to play our games. There is no option to deposit money, place bets, or win real money prizes. Any virtual currency or points accumulated during gameplay have no monetary value and cannot be exchanged for real money or prizes.</p>
+                </div>
+
+                <div class="disclaimer-item">
+                    <div class="disclaimer-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Responsible Entertainment</h3>
+                    <p>While our platform does not involve real-money gambling, we encourage responsible entertainment habits. We recommend setting time limits for gameplay, taking regular breaks, and ensuring that gaming does not interfere with daily responsibilities. If you feel your entertainment habits are becoming problematic, please seek help from appropriate support organizations.</p>
+                </div>
+
+                <div class="disclaimer-item">
+                    <div class="disclaimer-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Legal Compliance</h3>
+                    <p>Magic Mole Adventures operates in compliance with all applicable laws and regulations. It is your responsibility to ensure that accessing and using our services is legal in your jurisdiction. We do not accept any liability if you access our services from locations where such content may be restricted or prohibited.</p>
+                </div>
+
+                <div class="disclaimer-item">
+                    <div class="disclaimer-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>No Warranty</h3>
+                    <p>Our services are provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied. We do not guarantee that our services will be uninterrupted, timely, secure, or error-free. Magic Mole Adventures reserves the right to modify or discontinue any aspect of our services at any time.</p>
+                </div>
+
+                <div class="disclaimer-item">
+                    <div class="disclaimer-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Account Responsibility</h3>
+                    <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security. Magic Mole Adventures will not be liable for any loss or damage arising from your failure to protect your account information.</p>
+                </div>
+            </div>
+
+            <div class="content-card text-center">
+                <h3>Need Assistance?</h3>
+                <p>If you have any questions about our disclaimer or terms of service, please contact our support team at <a href="mailto:support@magicmole.site" style="color: var(--accent);">support@magicmole.site</a>.</p>
+                <p>Last updated: January 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsible Entertainment Section -->
+    <section class="responsible-entertainment">
+        <div class="container">
+             <h5>The Right Way to Enjoy</h5>
+            <div class="responsible-logos">
+                <a href="#" aria-label="Support for responsible entertainment">
+                    <img src="data:image/svg+xml;utf8,
+                    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'>
+                        <rect width='100' height='40' fill='%23f8f9fa' rx='5'/>
+                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>Entertainment Guard</text>
+                    </svg>" alt="Support for responsible entertainment">
+                </a>
+                <a href="#" aria-label="Entertainment awareness">
+                    <img src="data:image/svg+xml;utf8,
+                    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'>
+                        <rect width='100' height='40' fill='%23f8f9fa' rx='5'/>
+                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>PlayMindful</text>
+                    </svg>" alt="Entertainment awareness">
+                </a>
+                <a href="#" aria-label="Entertainment control">
+                    <img src="data:image/svg+xml;utf8,
+                    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'>
+                        <rect width='100' height='40' fill='%23f8f9fa' rx='5'/>
+                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>PlayControl</text>
+                    </svg>" alt="Entertainment control">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="navbar-brand">magicmole.site</h4>
+                    <p class="mt-3">A magical gaming experience designed for entertainment and fun.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="footer-links">
+                        <h6>Navigation</h6>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="play.html">Experiences</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#about">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="footer-links">
+                        <h6>Legal</h6>
+                        <ul>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="disclaimer.html">Responsible Play</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="footer-links">
+                        <h6>Support</h6>
+                        <p>Email: <a href="mailto:support@magicmole.site">support@magicmole.site</a></p>
+                        <p>We're here to help you with any questions about our magical adventures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <p>For adults 18+ only. magicmole.site provides entertainment experiences only — no real-money gambling or real-world prizes are offered.</p>
+                <p>© 2025 magicmole.site. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
